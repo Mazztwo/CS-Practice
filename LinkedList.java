@@ -6,20 +6,58 @@
   test the class.
 */
 
-public class LinkedList
+public class LinkedList<T>
 {
-  /* Private inner class
-    Nodes are the structures linked by
-    the linked list. 
+   private Node head;
+   private int numberOfData;
+
+  public LinkedList()
+  {
+
+  }
+
+
+  // Implement: Add, Delete, Search, Print
+
+
+
+
+
+
+  /*
+    Implementation of node class 
+    as a private inner class to
+    be used for the LinkedLiss.
   */
   private class Node
   {
+    private T data;       // Data contained in node
+    private Node next;    // Pointer to next node in list
 
-  }  
+    // Constructors for Node
 
-  // Implement: Insert, Delete, Search, Print
+    // If no next node is selected, null is passed to defult constructor.
+    private Node(T nodeData)
+    {
+      this(nodeData, null);
+    }
+
+    // Assigns data 
+    private Node(T nodeData, Node nextNode)
+    {
+      data = nodeData;
+      next = nextNode;
+    }
+
+    /* No setter and getter methods are necessary.
+       LinkedList, being the outerclass of Node, will
+       have access to Node's data directly.
+    */ 
+
+  }
 
 
+  // A main mehtod to test the functionality of the LinkedList.
   public static void main(String args[])
   { 
     System.out.println("Hi.");
