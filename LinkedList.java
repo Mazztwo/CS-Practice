@@ -36,7 +36,7 @@ public class LinkedList<T>
       {
         head = newNode;
         numberOfData++;
-        
+      
         return true;
       }
       
@@ -52,10 +52,60 @@ public class LinkedList<T>
     }
   }
 
+  /*
+  This method takes one argument: the data user wisher to remove from list.
+  This method returns one argument: true/false based on if remove was sucessful.
+
+  This method will search the list for the first instance of the data and 
+  remove that node. If no argument is given, the head will be popped off
+  the list.
+  */
+  public boolean remove(T dataToRemove)
+  {
+    // If dataToRemove = null, just remove a random node, in this case the head
+    if(dataToRemove == null)
+    {
+      head = head.next;
+      return true;
+    }
+
+    Node previous = head;
+    Node curr = head.next;
+    
+    
+    if (head.data.equals(dataToRemove))
+    {
+      head = head.next;
+      return true;
+    }
+
+    while(curr != null)
+    {
+      if(curr.data.equals(dataToRemove))
+      {
+        previous.next = curr.next;
+        return true;
+      }
+        previous = curr;
+        curr = curr.next;
+
+    }
+    return false;
+
+  }
+
+  /*
+  This method takes one argument: the data the user wishes to find in list.
+  This method returns one argument: true/false based on if search was successful.
+  */
+  public boolean search(T data)
+  {
+
+    return true;
+  }
+
+
   
-
-
-
 
 
 
@@ -115,6 +165,33 @@ public class LinkedList<T>
     System.out.println("Sucessfuly added to list?: " + item2added);
     System.out.println("Item 3: " + item3); 
     System.out.println("Sucessfuly added to list?: " + item3added);
+
+    // Add more items and test remove() method.
+    String item4 = "Silver";
+    String item5 = "Brought";
+    String item6 = "Spoon";
+    String item7 = "Cruton";
+    String item8 = "Prince";
+
+    aList.add(item4);
+    aList.add(item5);
+    aList.add(item8);
+
+    boolean item4removed = aList.remove(item4);
+    boolean item6removed = aList.remove(item6);
+    boolean item7removed = aList.remove(item7);
+    boolean item8removed = aList.remove(item8);
+
+    System.out.println("Item to remove: " + item4);
+    System.out.println("Item 4 removed?: " + item4removed);
+    System.out.println("Item to remove: " + item6);
+    System.out.println("Item 6 removed?: " + item6removed);
+    System.out.println("Item to remove: " + item7);
+    System.out.println("Item 7 removed?: " + item7removed);
+    System.out.println("Item to remove: " + item8);
+    System.out.println("Item 8 removed?: " + item8removed);
+    
+    
 
   }
 }
