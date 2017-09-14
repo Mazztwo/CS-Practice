@@ -98,10 +98,27 @@ public class LinkedList<T>
   This method takes one argument: the data the user wishes to find in list.
   This method returns one argument: true/false based on if search was successful.
   */
-  public boolean search(T data)
+  public boolean search(T dataToSearch)
   {
+    // If no data provided to search for, return false
+    if(dataToSearch == null)
+    {
+      return false;
+    }
 
-    return true;
+    Node curr = head;
+
+    while(curr != null)
+    {
+      if(curr.data.equals(dataToSearch))
+      {
+        return true;
+      }
+
+      curr = curr.next;
+    }
+
+    return false;
   }
 
 
@@ -153,7 +170,7 @@ public class LinkedList<T>
     // Test add() method. Will print true or false based on if data was added or not.
     String item1 = "Hello";
     String item2 = "World";
-    String item3 = "Dount";
+    String item3 = "Donut";
 
     boolean item1added = aList.add(item1);
     boolean item2added = aList.add(item2);
@@ -190,8 +207,29 @@ public class LinkedList<T>
     System.out.println("Item 7 removed?: " + item7removed);
     System.out.println("Item to remove: " + item8);
     System.out.println("Item 8 removed?: " + item8removed);
-    
-    
+  
+    // Add more items and test search() method.
+    aList.add("Paper");
+    aList.add("Mango");
+    aList.add("Tire");
+
+    boolean itemSearch1 = aList.search("World");
+    boolean itemSearch2 = aList.search("Mango");
+    boolean itemSearch3 = aList.search("Donut");
+    boolean itemSearch4 = aList.search("Mushroom");
+    boolean itemSearch5 = aList.search("Pencil");
+
+    System.out.println("Item to search for: World");
+    System.out.println("Item found?: " + itemSearch1);
+    System.out.println("Item to search for: Mango");
+    System.out.println("Item found?: " + itemSearch2);
+    System.out.println("Item to search for: Donut");
+    System.out.println("Item found?: " + itemSearch3);
+    System.out.println("Item to search for: Mushroom");
+    System.out.println("Item found?: " + itemSearch4);
+    System.out.println("Item to search for: Pencil");
+    System.out.println("Item found?: " + itemSearch5);
+
 
   }
 }
