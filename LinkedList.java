@@ -17,7 +17,7 @@ public class LinkedList<T>
     numberOfData = 0;
   }
 
-  // Implement: Add, Remove, Search, toArray, Print
+  // Implement: Add, Remove, Search, toString
 
   /* 
   This method takes one argument: the data user wishes to add.
@@ -121,9 +121,26 @@ public class LinkedList<T>
     return false;
   }
 
-
+/*
+This method takes no arguments.
+This method returns a string representation of the linked list. 
+*/
   
+public String toString()
+{
+  String stringList = head.data.toString();
+  Node curr = head.next;
 
+  while(curr != null)
+  {
+    stringList = stringList + " --> ";
+    stringList = stringList + curr.data.toString();
+
+    curr = curr.next;
+  }
+
+  return stringList;
+}
 
 
 
@@ -229,6 +246,10 @@ public class LinkedList<T>
     System.out.println("Item found?: " + itemSearch4);
     System.out.println("Item to search for: Pencil");
     System.out.println("Item found?: " + itemSearch5);
+
+    // Test toString()
+    System.out.println("\n");
+    System.out.println(aList.toString());
 
 
   }
