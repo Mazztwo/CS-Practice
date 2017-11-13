@@ -12,9 +12,14 @@
     This algorithm takes an item from the unsorted part of the array
     and places it in the correct spot in the sorted portion of the array.
  */
-public class InsertionSort
+public class InsertionSort<T>
 {
-
+    
+    
+    public T[] insertionSort(T[] array)
+    {
+        return null;
+    }
 
 
 
@@ -22,7 +27,7 @@ public class InsertionSort
 
     public static void main(String[] args)
     {
-        
+        System.out.println("Piacere!");
     }
 }
 
