@@ -28,7 +28,7 @@ public class InsertionSort
             data = array[unsortedIndex];
             
             
-            for(int sortedIndex = unsortedIndex - 1; sortedIndex < 0; sortedIndex--)
+            for(int sortedIndex = unsortedIndex - 1; sortedIndex >= 0; sortedIndex--)
             {
                     // Compare
                     if(array[sortedIndex] > data)
@@ -57,16 +57,26 @@ public class InsertionSort
     public static void main(String[] args)
     {
         
-        int[] array = {3,2,6,1,5};
+        int[] array1 = {3,2,6,1,5};
+        int[] array2 = {10,4,1,4,6,3,2};
         
         // Print unsorted array
-        System.out.println("UNSORTED ARRAY:");
-        System.out.println(Arrays.toString(array) + "\n");
+        System.out.println("UNSORTED ARRAY1:");
+        System.out.println(Arrays.toString(array1) + "\n");
         
-        array = insertionSort(array);
+        array1 = insertionSort(array1);
         
-        System.out.println("SORTED ARRAY:");
-        System.out.println(Arrays.toString(array) + "\n");
+        System.out.println("SORTED ARRAY1:");
+        System.out.println(Arrays.toString(array1) + "\n");
+
+         // Print unsorted array
+         System.out.println("UNSORTED ARRAY2:");
+         System.out.println(Arrays.toString(array2) + "\n");
+         
+         array2 = insertionSort(array2);
+         
+         System.out.println("SORTED ARRAY2:");
+         System.out.println(Arrays.toString(array2) + "\n");
     }
 }
 
