@@ -15,7 +15,7 @@
 
 import java.util.*;
 
-public class InsertionSort
+public class Sorting
 {
     
     public static int[] insertionSort(int[] array)
