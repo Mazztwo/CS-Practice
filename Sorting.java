@@ -50,32 +50,39 @@ public class Sorting
         return array;
     }
 
+    
+    public static int[] selectionSort(int[] array)
+    {
+        /*
+            Start at array[0]
+            Iterate through, grab smallest piece of data, place at index 0
+            Now at array[1], repeate above steps, place at index 1
+            etc....
+        */
 
+        for(int sortedIndex = 0; sortedIndex < array.length; sortedIndex++)
+        {
+            
+        }    
+
+
+
+        return array;
+    }
 
 
 
     public static void main(String[] args)
-    {
-        
-        int[] array1 = {3,2,6,1,5};
+    {;
         int[] array2 = {10,4,1,4,6,3,2};
         
-        // Print unsorted array
-        System.out.println("UNSORTED ARRAY1:");
-        System.out.println(Arrays.toString(array1) + "\n");
-        
-        array1 = insertionSort(array1);
-        
-        System.out.println("SORTED ARRAY1:");
-        System.out.println(Arrays.toString(array1) + "\n");
-
          // Print unsorted array
          System.out.println("UNSORTED ARRAY2:");
-         System.out.println(Arrays.toString(array2) + "\n");
+         System.out.println(Arrays.toString(array2));
          
          array2 = insertionSort(array2);
          
-         System.out.println("SORTED ARRAY2:");
+         System.out.println("Insertion-SORTED ARRAY2:");
          System.out.println(Arrays.toString(array2) + "\n");
     }
 }
