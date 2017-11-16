@@ -60,9 +60,25 @@ public class Sorting
             etc....
         */
 
+        int dataToSwap, currSmallest, unsortedIndex;
+
         for(int sortedIndex = 0; sortedIndex < array.length; sortedIndex++)
         {
-            
+            dataToSwap = array[sortedIndex];
+            currSmallest = dataToSwap;
+
+            for(unsortedIndex = sortedIndex; unsortedIndex < array.length; unsortedIndex++)
+            {
+                if(array[unsortedIndex] < currSmallest)
+                {
+                    currSmallest = array[unsortedIndex];
+                }
+                
+            }    
+
+            array[unsortedIndex] = dataToSwap;
+            array[sortedIndex] = currSmallest;
+
         }    
 
 
@@ -74,16 +90,27 @@ public class Sorting
 
     public static void main(String[] args)
     {;
-        int[] array2 = {10,4,1,4,6,3,2};
+        int[] array1 = {10,4,1,4,6,3,2};
+        int[] array2 = {12,4,6,88,12,3};
         
          // Print unsorted array
-         System.out.println("UNSORTED ARRAY2:");
-         System.out.println(Arrays.toString(array2));
+         System.out.println("UNSORTED ARRAY1:");
+         System.out.println(Arrays.toString(array1));
          
-         array2 = insertionSort(array2);
+         array1 = insertionSort(array1);
          
-         System.out.println("Insertion-SORTED ARRAY2:");
-         System.out.println(Arrays.toString(array2) + "\n");
+         System.out.println("Insertion-SORTED ARRAY1:");
+         System.out.println(Arrays.toString(array1) + "\n");
+
+
+          // Print unsorted array
+          System.out.println("UNSORTED ARRAY2:");
+          System.out.println(Arrays.toString(array2));
+          
+          array2 = selectionSort(array2);
+          
+          System.out.println("Selection-SORTED ARRAY2:");
+          System.out.println(Arrays.toString(array2) + "\n");
     }
 }
 
