@@ -89,6 +89,32 @@ public class Sorting
 
     public static int[] bubbleSort(int[] array)
     {
+    		/* 
+    		 * Compare data at i with data at i +1
+    		 * If at i+1 is less than at i, swap, 
+    		 * Do this for every index, until end of array reached
+    		 * Then start at the beginning of array again and 
+    		 * do the same thing.
+    		 */
+    		
+    		int temp;
+    	
+    		for(int i = 0; i < array.length; i++)
+    		{
+    			for(int j = 0; j < array.length; j++)
+    			{
+    				if(j != (array.length - 1) )
+    				{
+    					if(array[j] > array[j+1])
+    					{
+    						temp = array[j+1];
+    						array[j+1] = array[j];
+    						array[j] = temp;
+    						
+    					}
+    				}
+    			}
+    		}
     	
     		return array;
     }
@@ -97,6 +123,7 @@ public class Sorting
     {
         int[] array1 = {10,4,1,4,6,3,2};
         int[] array2 = {9,4,44,1,2,3,6,412};
+        int[] array3 = {43,3,11,5,2,77,4,2,3};
         
          // Print unsorted array
          System.out.println("UNSORTED ARRAY1:");
@@ -116,6 +143,15 @@ public class Sorting
           
           System.out.println("Selection-SORTED ARRAY2:");
           System.out.println(Arrays.toString(array2) + "\n");
+          
+          // Print unsorted array
+          System.out.println("UNSORTED ARRAY3:");
+          System.out.println(Arrays.toString(array3));
+          
+          array3 = selectionSort(array3);
+          
+          System.out.println("Bubble-SORTED ARRAY3:");
+          System.out.println(Arrays.toString(array3) + "\n");
     }
 }
 
