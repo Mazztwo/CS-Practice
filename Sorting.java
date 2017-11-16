@@ -56,29 +56,30 @@ public class Sorting
         /*
             Start at array[0]
             Iterate through, grab smallest piece of data, place at index 0
-            Now at array[1], repeate above steps, place at index 1
+            Now at array[1], repeat above steps, place at index 1
             etc....
         */
 
-        int dataToSwap, currSmallest, unsortedIndex;
+        int dataToSwap, dataToSwapIndex, currSmallest, unsortedIndex;
 
         for(int sortedIndex = 0; sortedIndex < array.length; sortedIndex++)
         {
-            dataToSwap = array[sortedIndex];
-            currSmallest = dataToSwap;
-
+        		currSmallest = array[sortedIndex];
+        		dataToSwap = array[sortedIndex];
+        		dataToSwapIndex = sortedIndex;
+        	
             for(unsortedIndex = sortedIndex; unsortedIndex < array.length; unsortedIndex++)
             {
                 if(array[unsortedIndex] < currSmallest)
                 {
                     currSmallest = array[unsortedIndex];
+                    dataToSwapIndex = unsortedIndex;
                 }
                 
             }    
-
-            array[unsortedIndex] = dataToSwap;
-            array[sortedIndex] = currSmallest;
-
+            
+          array[sortedIndex] = currSmallest;
+          array[dataToSwapIndex] = dataToSwap;  
         }    
 
 
@@ -89,9 +90,9 @@ public class Sorting
 
 
     public static void main(String[] args)
-    {;
+    {
         int[] array1 = {10,4,1,4,6,3,2};
-        int[] array2 = {12,4,6,88,12,3};
+        int[] array2 = {9,4,44,1,2,3,6,412};
         
          // Print unsorted array
          System.out.println("UNSORTED ARRAY1:");
