@@ -87,7 +87,11 @@ public class Sorting
         return array;
     }
 
-
+    public static int[] bubbleSort(int[] array)
+    {
+    	
+    		return array;
+    }
 
     public static void main(String[] args)
     {
