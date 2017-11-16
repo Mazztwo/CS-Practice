@@ -123,7 +123,7 @@ public class Sorting
     {
         int[] array1 = {10,4,1,4,6,3,2};
         int[] array2 = {9,4,44,1,2,3,6,412};
-        int[] array3 = {43,3,11,5,2,77,4,2,3};
+        int[] array3 = {43,3,11,5,2,77,4,1,3};
         
          // Print unsorted array
          System.out.println("UNSORTED ARRAY1:");
