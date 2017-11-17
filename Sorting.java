@@ -119,6 +119,38 @@ public class Sorting
     		return array;
     }
 
+    public static int[] mergeSort(int[] array)
+    {
+    		/*
+    		 * Find half way point
+    		 * Keep dividing sub-arrays until 1 element left
+    		 * Merge sub-arrays and move up until two halves
+    		 */
+    	
+    		
+    		// Find half point
+    	
+    	
+    		// Recursively sort lower half
+    	
+    	
+    		// Recursively sort upper half
+    	
+    	
+    		// Merge two halfs in auxillery array
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    		return array;
+    }
+    
+    
+    
     public static void main(String[] args)
     {
         int[] array1 = {10,4,1,4,6,3,2};
