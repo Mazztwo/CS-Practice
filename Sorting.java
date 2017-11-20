@@ -27,7 +27,6 @@ public class Sorting
             // Grab the data
             data = array[unsortedIndex];
             
-            
             for(int sortedIndex = unsortedIndex - 1; sortedIndex >= 0; sortedIndex--)
             {
                     // Compare
@@ -49,8 +48,7 @@ public class Sorting
         
         return array;
     }
-
-    
+   
     public static int[] selectionSort(int[] array)
     {
         /*
@@ -126,26 +124,52 @@ public class Sorting
     		 * Keep dividing sub-arrays until 1 element left
     		 * Merge sub-arrays and move up until two halves
     		 */
-    	
     		
-    		// Find half point
-    	
+    		int[] tempArray = new int[array.length];
+    		
+    		// Find half point:
+    		// Java rounds down when doing int division,
+    		// so array.length/2 gives midpoint, or 
+    		// lower bound of upper half.
+    		int halfPoint = array.length / 2;
     	
     		// Recursively sort lower half
-    	
+    		tempArray = m_sort(0, halfPoint-1, array, tempArray);
     	
     		// Recursively sort upper half
+    		tempArray = m_sort(halfPoint, array.length-1, array, tempArray);
     	
-    	
-    		// Merge two halfs in auxillery array
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
+    		// Merge two halves in temporary array
+    		array = m_sort_merge(tempArray, array);
+    		
+    		
+    		return array;
+    }
+    
+    
+    
+    private static int[] m_sort(int start, int end, int[] array, int[] tempArray)
+    {
+    		int diff = end-start;
+    		int halfPoint = (diff) / 2;
+    		
+    		if(diff > 1)
+    		{
+    			// sort lower half
+    			tempArray = m_sort(start, halfPoint-1, array, tempArray);
+    			// sort upper half
+    			tempArray = m_sort(halfPoint, end, array, tempArray);
+    			
+    			
+    		}
+
+     	
+    		return array;
+    }
+    
+    
+    private static int[] m_sort_merge(int[] tempArray, int[] array)
+    {
     		return array;
     }
     
