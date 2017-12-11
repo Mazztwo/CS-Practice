@@ -159,13 +159,14 @@ public class Sorting
     			tempArray = m_sort(start, halfPoint-1, array, tempArray);
     			// sort upper half
     			tempArray = m_sort(halfPoint, end, array, tempArray);
-    			
-    			
     		}
-
-     	
+    		
+    		// Somehow merge....
+    		
     		return array;
     }
+    
+    
     
     
     private static int[] m_sort_merge(int[] tempArray, int[] array)
