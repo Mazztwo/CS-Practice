@@ -12,10 +12,19 @@ occurrence has a smaller index than the second
 occurrence of the other number does. If there 
 are no such elements, return -1.
 
-
 """
-int firstDuplicate(int[] a) 
-{
 
-}
+def firstDuplicate(numbers): 
+  
+  firstDup = numbers[0]
 
+  for nun in numbers:
+    pass
+  
+  return firstDup
+
+
+
+nums = [2,3,3,1,5,2]
+
+print nums
