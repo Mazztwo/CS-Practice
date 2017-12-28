@@ -17,9 +17,13 @@ are no such elements, return -1.
 def firstDuplicate(numbers): 
   
   firstDup = numbers[0]
+  nums_length = len(numbers)
 
-  for nun in numbers:
-    pass
+  if(nums_length == 1):
+      return -1
+
+  for num in numbers:
+     pass
   
   return firstDup
 
