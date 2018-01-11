@@ -15,20 +15,11 @@ are no such elements, return -1.
 """
 
 def firstDuplicate(numbers): 
-  
-  firstDup = numbers[0]
-  nums_length = len(numbers)
-
-  if(nums_length == 1):
-      return -1
-
-  for num in numbers:
-     pass
-  
-  return firstDup
+    
+  pass
 
 
 
-nums = [2,3,3,1,5,2]
+nums = [2, 3, 1, 3, 2, 5]
 
 print nums
