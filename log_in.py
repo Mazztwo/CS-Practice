@@ -32,14 +32,24 @@ class User:
     def printPass(self):
         print("Password:", self.password)
 
+    def setPass(self, oldPass, newPass):
+
+        if(self.password == oldPass):
+            self.password = newPass
+            print("New password has been set.")
+        else:
+            print("Old password was incorrect. Cannot reset password.")
+
 
 def main():
 
 
-    print("Hallow!")
+    per = User("John", "12345")
 
+    per.printName()
+    per.printPass()
 
-
+    per.setPass("12345", "luna")
 
 
 
