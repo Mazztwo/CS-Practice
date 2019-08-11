@@ -1,0 +1,36 @@
+Fetch-Decode-Execute Cycle
+    -FETCH
+        -Assembly placed in physical memory location
+        -Program counter(PC) in CPU gets address of physical memory of assembly instruction
+            -PC will increment address to step through instruction sets
+        -Registers in CPU will be manipulated based on instructions in memory
+        -CPU will fetch instruction in memory
+            -instruction sent via data bus to CPU buffer register/instruction register
+    -DECODE
+        -Decoder on CPU figures out what assembly instruction means and sends that info to Control Unit(CU) on CPU
+        -CU moves value in CPU register to the Arithmetic & Logic  Unit (ALU)
+    -EXECUTE
+        -ALU then performs whatever operation CU asks it to do based on assembly instruction
+        -Value in ALU is sent back to CPU register via internal bus
+Arithmetic & Logic Unit
+    -Arithmetic Unit
+        -Handles all numerical operations 
+        -Built from 4 different logic gates (AND, OR, XOR, NOT)
+        -Putting different combination sof gates together allows for mathematical operations
+    -Logic Unit
+        -Uses gates to do AND, OR, NOT operations, checking for true/false conditions
+    -8 bit ALUs will take two 8 bit inputs, A & B, and a 4 bit operation code to tell it what to do
+Memory
+    -Random Access Memory 
+        -volatile, only functions if power
+    -Persistent Memory 
+        -non-volatile, works without power
+    -Built with gates 
+        -Gates remember single bits, and building memory up with gates allows for "remembering" multiple bits
+        -Memory latches
+            -Circuits latch to certain values
+        -Gated latches
+            -Two inputs, data in and write enable
+                -Write enable allows for either gating (read-only) the latched value or writing a value
+    -Group of latches called a register, which holds single number based on number of bits (width)
+    -
