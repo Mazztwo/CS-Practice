@@ -1,0 +1,9 @@
+Asymptotic Notation / Big O Notation
+    -uniform way of measuring algorithmic efficiency
+    -measure how how a program's runtime asymptotically
+        -as size of input increases towards infinity, how does runtime of program grow?
+    -measure of how well an algorithm scales as the number of inputs increases 
+    O(1) --> constant time operation --> num of operations doesn't change with size of input
+    O(n) --> linear runtime
+    -all this is with respect to the input size
+    O(log n) < O(n) < O(n*log n) < O(n^2) < O(2^n) < O(n!)

@@ -33,4 +33,3 @@ Memory
             -Two inputs, data in and write enable
                 -Write enable allows for either gating (read-only) the latched value or writing a value
     -Group of latches called a register, which holds single number based on number of bits (width)
-    -
