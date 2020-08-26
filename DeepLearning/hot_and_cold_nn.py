@@ -1,3 +1,5 @@
+# Hot and Cold Learning Neural Network
+
 import helpers
 import numpy as np
 
